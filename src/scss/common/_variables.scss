@@ -1,13 +1,19 @@
-$orange: #D54414;
-$blue: #278BBF;
-$white: #fff;
-$primary: $orange;
-$secondary: $blue;
-$font-family-base: 'Titillium Web',
+// Colors
+$primary: #C34687;
+$white: #ffffff;
+$light: #F8F8F8;
+$dark: #4D4D4D;
+// Fonts
+$font-family-base: 'Roboto',
 "Helvetica Neue",
 Helvetica,
 Arial,
 sans-serif;
+$body-color: $dark;
+// Misc
+$enable-rounded: false;
+$border-width: 2px;
+// Navbar
 $navbar-toggler-font-size: 1.75rem;
 $navbar-light-color: $primary;
 $navbar-light-hover-color: $primary;

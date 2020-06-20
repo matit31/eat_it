@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1.page-title {
+  font-size: 2.625rem;
+  color: $white;
+  text-shadow: 0 3px 6px rgba($black, 0.5);
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+  @include under_title();
+}
+
+h3:not(.h4),
+.h3 {
+  font-size: 1.25rem;
+  @include under_title(30px, 3px, $dark);
+}
+
+h4,
+.h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}

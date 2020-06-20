@@ -1,0 +1,17 @@
+.single-spot {
+    .entry-content {
+        font-size: 1.375em;
+    }
+    .spot-niveau {
+        h3::after {
+            content: none;
+        }
+    }
+    .planche {
+        margin: 0 0.25rem;
+        &.over-level {
+            filter: grayscale(1);
+            opacity: 0.5;
+        }
+    }
+}

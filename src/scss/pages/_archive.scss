@@ -1,0 +1,67 @@
+.category .entry-archive-content {
+    display: flex;
+    flex-direction: column;
+    .entry-title {
+        text-transform: none;
+    }
+    .more-link {
+        margin-top: auto;
+    }
+}
+
+
+/* Pagination */
+
+.screen-reader-text {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    .nav-links {
+        font-size: 0.875rem;
+        display: flex;
+        >* {
+            display: block;
+            border: 2px solid $primary;
+            padding: 0.25rem 0.625rem;
+            transition: 0.3s;
+            margin-left: -2px;
+        }
+        a:hover {
+            color: $white;
+            background-color: $primary;
+        }
+        .next {
+            font-size: 0;
+            &::before {
+                content: "\f105";
+                font-size: 0.875rem;
+                font-family: ForkAwesome;
+            }
+        }
+        .prev {
+            font-size: 0;
+            &::before {
+                content: "\f104";
+                font-size: 0.875rem;
+                font-family: ForkAwesome;
+            }
+        }
+    }
+}
+
+
+/* Aside */
+
+.aside-categories {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li li {
+            margin: 0.5rem 0;
+        }
+    }
+}

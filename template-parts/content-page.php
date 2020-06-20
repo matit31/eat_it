@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part for displaying posts
+ * Template part for displaying page content
  *
  *
  * @package WordPress
@@ -13,9 +13,21 @@
 
 <article <?php post_class(); ?>>
 
-  <div class="container py-5">
+  <header class="entry-header main-header py-5">
 
-    <h1 class="page-title entry-title"><?php the_title(); ?></h1>
+    <div class="container">
+       
+      <h1 class="page-title entry-title"><?php the_title(); ?></h1>
+
+      <?php if(is_front_page()) : ?>
+        <a href="<?= get_post_type_archive_link('spot'); ?>" class="btn btn-outline-light mt-4"><?php _e('Tous les spots', 'startheme'); ?></a>
+      <?php endif; ?>
+
+    </div>
+
+  </header>
+
+  <div class="container py-5">
 
     <div class="row justify-content-center">
 

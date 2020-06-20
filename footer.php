@@ -9,7 +9,7 @@
  */
 ?>
 
-<footer class="page-footer py-4">
+<footer class="page-footer bg-dark text-white pt-5 pb-3">
 
   <div class="container">
 
@@ -29,7 +29,7 @@
 
     </div><!-- .row -->
 
-    <nav class="nav-footer d-flex flex-wrap justify-content-center mt-3">
+    <nav class="nav-footer d-flex flex-wrap mt-3">
       <p class="copyright mr-3">&copy; <a href="<?= home_url('/') ?>"><?php bloginfo('name') ?> <?= date('Y') ?></a></p>
       <?php if (has_nav_menu('footer_navigation'))
         wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav'])

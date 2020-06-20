@@ -1,0 +1,11 @@
+.page-footer {
+    h2::after {
+        background-color: $white;
+    }
+    a {
+        color: $white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

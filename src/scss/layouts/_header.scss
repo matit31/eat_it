@@ -1,3 +1,14 @@
-.navbar-brand img {
-  width: 150px;
+.main-header {
+    background: url(../images/wave.jpg) left center;
+    background-size: cover;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.home .main-header {
+    background: url(../images/home_bg.jpg) top center;
+    min-height: calc(100vh - 90px);
+    text-align: center;
 }

@@ -1,19 +1,22 @@
+// Variables
 @import "common/variables";
-
+// Vendor
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
+// Commons
 @import "common/mixins";
 @import "common/global";
-
+// Components
 @import "components/buttons";
 @import "components/forms";
+@import "components/carousel";
 @import "components/contact-form7";
-
+// Layouts
 @import "layouts/header";
 @import "layouts/navigation";
 @import "layouts/sidebar";
 @import "layouts/footer";
-
-@import "pages/home";  
-@import "pages/page";   
-@import "pages/archive";  
+// Pages
+@import "pages/home";
+@import "pages/page";
+@import "pages/archive";
+@import "pages/spot";

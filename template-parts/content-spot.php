@@ -11,6 +11,7 @@
 
 /* aller chercher tout ce qu'il y a dans e champs informations */
 $niveau = get_field_object('niveau');
+$quartier = get_field_object('quartier');
 $infos = get_field_object('informations');
 $acces = get_field_object('acces');
 $latitude = get_field('latitude');
@@ -52,7 +53,7 @@ if($key <= $niveau['value']) $img_class = 'level';
 else $img_class = 'over-level'; 
 ?>
 
-<img src="<?= get_template_directory_uri(); ?>/dist/images/planche-1.svg" alt="<?= $choice ?>" title="<?= $choice ?>" class="<?= $img_class ?>">
+<img src="<?= get_template_directory_uri(); ?>/dist/images/etoile-1.svg" alt="<?= $choice ?>" title="<?= $choice ?>" class="<?= $img_class ?>">
 
 <?php endforeach; ?>
 
@@ -73,6 +74,11 @@ else $img_class = 'over-level';
   <!-- appelle les informations qui sont demandées dans la variable tout en haut -->
   <h2><?= $infos['label']; ?></h2>
       <?= $infos['value']; ?>
+    </div>
+<div class="spot-infos my-5">
+  <!-- appelle les informations qui sont demandées dans la variable tout en haut -->
+  <h2><?= $quartier['label']; ?></h2>
+      <?= $quartier['value']; ?>
     </div>
 
     <div class="spot-acces my-5">

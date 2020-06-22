@@ -12,7 +12,7 @@
 
 $frontspots = get_posts( array(
   'numberposts' => 5,
-  'post_type' => 'spot',
+  'post_type' => 'restaurant',
   'orderby' => 'rand',
 ));
 
@@ -54,9 +54,9 @@ get_header();
     ?>
 
   </div><!-- .front-spots_grid -->
-
+<!-- lien de la page d'acceuil vers la page restaurant pour afficher toute la liste des restaurants -->
   <div class="text-center my-5">
-    <a href="<?= get_post_type_archive_link('spot'); ?>" class="btn btn-outline-primary"><?php _e('Tous les spots', 'startheme'); ?></a>
+    <a href="<?= get_post_type_archive_link('restaurant'); ?>" class="btn btn-outline-primary"><?php _e('Tous les restaurants', 'startheme'); ?></a>
   </div>
 
 </section><!-- .front-spots -->
@@ -78,6 +78,6 @@ get_header();
 
 </section><!-- .sticky-post -->
 
-<?php get_sidebar('news') ?>
+<?php get_sidebar('news'); ?>
 
 <?php get_footer() ?>

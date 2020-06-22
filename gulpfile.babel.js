@@ -15,7 +15,7 @@ import browserSync from 'browser-sync';
 import wpPot from "gulp-wp-pot";
 import info from './package.json';
 
-const proxyUrl = "http://localhost/breizhsurf/";
+const proxyUrl = "http://localhost/eat_it/";
 
 const server = browserSync.create();
 const PRODUCTION = yargs.argv.prod;

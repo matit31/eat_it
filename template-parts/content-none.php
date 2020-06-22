@@ -17,7 +17,7 @@
     <h1 class="page-title entry-title"><?php _e('Aucun résultat trouvé.', 'startheme') ?></h1>
 
     <div class="entry-content">  
-      <p><?php _e( 'Il semble que nous ne trouvions pas ce que vous recherchez. Peut-être que la recherche peut aider.', 'startheme' ); ?></p>
+      <p><?php _e( 'Il semble que nous ne trouvions pas ce que vous recherchez. Aidez vous de la barre de recherche.', 'startheme' ); ?></p>
       <?php get_search_form(); ?>   
     </div>
 

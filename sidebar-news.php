@@ -1,6 +1,7 @@
 <?php
 /**
- * The last posts sidebar displayed before footer
+ * 
+ * Les dernières actualités avant le footer
  * 
  * @package startheme
  */

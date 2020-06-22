@@ -52,10 +52,7 @@ add_action('widgets_init', function () {
     'before_title'  => '<h2 class="widget-title h3">',
     'after_title'   => '</h2>'
   ];
-  register_sidebar([
-    'name' => __('Zone droite', 'startheme') . ' ' . 1,
-    'id'   => 'sidebar-right'
-  ] + $config);
+/* Zones header et footer */
   register_sidebar([
     'name' => __('Zone pied de page', 'startheme') . ' ' . 1,
     'id'   => 'footer-sidebar-1'

@@ -44,11 +44,13 @@
         ) );
         wp_nav_menu( array(
           'theme_location'  => 'social',
+          'depth' => 2,
           'menu_class'      => 'navbar-nav social-menu',
           'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
           'walker'          => new WP_Bootstrap_Navwalker(),
         ) );
-        ?>
+       get_search_form();
+       ?>
       </div>
 
     </div>

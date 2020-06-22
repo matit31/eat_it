@@ -20,12 +20,12 @@
 
   <div class="sticky-post_content py-4 col-sm-10 offset-sm-1 col-md-4 offset-md-0">
 
-    <h2><?php _e('À la une', 'stratheme'); ?></h2>  
+    <h2><?php _e('Dernières nouveautées', 'startheme'); ?></h2>  
 
     <h3 class="h4"><a href="<?php the_permalink(); ?>" title="<?php _e( 'Lire la suite', 'startheme' ) ?>"><?php the_title(); ?></a></h3>
-
+    
     <?php the_excerpt(); ?>
-
+    
   </div>
 
 </article>

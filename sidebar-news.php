@@ -1,7 +1,6 @@
 <?php
 /**
- * 
- * Les dernières actualités avant le footer
+ * The last posts sidebar displayed before footer
  * 
  * @package startheme
  */
@@ -9,10 +8,9 @@
 $exclude = is_front_page() ? get_option( 'sticky_posts' ) : [get_the_ID()];
 
 $lastnews = get_posts( array(
-  'numberposts' => 5,
-  'category' => 4,
+  'numberposts' => 3,
+  'category' => 28,
   'exclude' => $exclude
-
 ));
 
 ?>
@@ -23,12 +21,14 @@ $lastnews = get_posts( array(
 
     <header class="sidebar-header d-flex flex-wrap justify-content-between align-items-start">
       <h2 class="sidebar-title"><?php _e('Dernières actualités', 'startheme'); ?></h2>
-      <a href="<?= esc_url( get_category_link( 4 ) ); ?>" class="btn btn-outline-primary"><?php _e('Toutes les actualités', 'startheme'); ?></a>
+      <a href="<?= esc_url( get_category_link( 28 ) ); ?>" class="btn btn-outline-primary"><?php _e('Toutes les actualités', 'startheme'); ?></a>
     </header>
 
     <?php if($lastnews) : ?>
 
-      <div class="carousel-news owl-carousel px-sm-4 mt-5 mt-sm-4">
+      <div class="carousel-news owl-carousel px-sm-4 mt-3 mt-sm-4">
+
+      
 
         <?php foreach( $lastnews as $post ) : 
           setup_postdata( $post ); ?>

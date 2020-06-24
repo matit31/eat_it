@@ -7,7 +7,10 @@
  * @subpackage Startheme
  * @since 1.0.0
  */
+
+ /* affichage des informations sur les restaurants */
 $quartier = get_field_object('quartier');
+$category = get_field_object('type_de_restaurant');
 ?>
 
 <article <?php post_class('mb-4 pb-4 border-bottom border-light'); ?>>
@@ -25,7 +28,7 @@ $quartier = get_field_object('quartier');
       <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php _e( 'Lire la suite', 'startheme' ) ?>"><?php the_title(); ?></a></h2>
       <span class="badge badge-pill badge-primary" title="Catégorie">
                             <i class="fa fa-tag"></i>
-                            <?= $category["name"]; ?>
+                            <?= $category["value"]; ?>
                         </span>
                    
                     <span class="badge badge-pill badge-secondary" title="Ville">

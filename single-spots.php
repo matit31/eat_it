@@ -24,6 +24,6 @@ get_header();
 
 </main>
 
-<?php get_sidebar('spots'); ?>
+<?php get_sidebar('restaurant'); ?>
 
 <?php get_footer() ?>

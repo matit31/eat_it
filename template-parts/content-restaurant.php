@@ -69,7 +69,7 @@ $localisation = get_field_object('localisation');
 
 </div><!-- .container -->
 
-</div><!-- .spot-content -->
+</div><!-- .restaurant-content -->
 
 
 <div class="spot-acf container">
@@ -136,7 +136,7 @@ $localisation = get_field_object('localisation');
 
     </div>
 
-  </div><!-- .spot-acf -->
+  </div><!-- .restaurant-acf -->
 
 </article>
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template file for displaying single posts and pages
- *
+ *Affichage des pages par défaut si pas de contenu précisé ni de mise en forme
  * ...
  *
  * @package WordPress
@@ -23,5 +23,7 @@ get_header();
         endif; ?>
 
 </main>
+
+<?php get_sidebar('news'); ?>
 
 <?php get_footer() ?>

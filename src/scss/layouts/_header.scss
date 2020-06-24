@@ -1,3 +1,5 @@
+/* image commune sur les pages des contenus */
+
 .main-header {
     background: url(../images/bg_applications.png) left center;
     background-size: cover;
@@ -6,6 +8,9 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+
+
+/* image sur le haut de la page acceuil */
 
 .home .main-header {
     background: url(../images/slider1.jpg) top center;

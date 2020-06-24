@@ -17,7 +17,7 @@ $frontspots = get_posts( array(
 ));
 
 $frontfocus = get_posts( array(
-  'posts_per_page' => 1,
+  'restaurant_per_page' => 1,
   'post__in' => get_option( 'sticky_posts' ),
   'ignore_sticky_posts' => 1
 ));
@@ -26,6 +26,25 @@ get_header();
 ?>
 
 <main>
+
+
+<!-- affichage menu choix multiples -->
+<form action="<?php echo home_url( '/' ); ?>">
+  <!-- Ici on affiche le champ « s »
+  mais nous aurions pu également en faire 
+  un champ de type hidden avec une valeur vide-->
+
+<!-- suite du formulaire… -->
+<div id="quartier-wrapper"> 
+<?php
+if ( $frontspots ) {
+  $args = array( 'genre' => $frontspots );
+  echo wp_quartiers_dropdown( $args );
+} ?>
+</div>
+  <button type="submit"class="btn btn-outline-primary">Voir la Sélection</button>
+</form>
+<!-- affichage menu choix multiples -->
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -61,22 +80,7 @@ get_header();
 
 </section><!-- .front-spots -->
 
-<section class="sticky-post container my-5 py-5">
 
-  <?php 
-  if ( $frontfocus ) : 
-    foreach ( $frontfocus as $post ) :
-      setup_postdata( $post ); ?>	
-
-      <?php get_template_part( 'template-parts/content-focus' ); ?>
-
-      <?php
-      endforeach; 
-      wp_reset_postdata();
-  endif;
-  ?>
-
-</section><!-- .sticky-post -->
 
 <?php get_sidebar('news'); ?>
 

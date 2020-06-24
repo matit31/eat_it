@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive pages (news)
  *
  *
  * @package WordPress
@@ -13,6 +13,8 @@ get_header();
 ?>
 
 <main>
+
+
 
   <?php if (have_posts()) : ?>
 
@@ -34,8 +36,13 @@ get_header();
 
           <div class="aside-categories col mb-4">
             
-            <ul>
-              <?php wp_list_categories(); ?>
+            <ul class="bg-light p-3">
+
+              <?php wp_list_categories( array(
+                'child_of' => 8,
+                'title_li' => '<h3>' . __( 'Categories' ) . '</h3>'
+              ) ); ?>
+              
             </ul>
 
           </div>

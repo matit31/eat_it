@@ -11,7 +11,7 @@
 
 $lastposts = get_posts( array(
   'numberposts' => 3,
-  'post_type' => 'spot',
+  'post_type' => 'restaurant',
   'orderby' => 'rand',
   'post__not_in' => array( get_the_ID() )
 ));

@@ -95,3 +95,36 @@ add_filter('get_the_archive_title', function ($title) {
   }
   return $title;
 });
+
+
+//affichage menu choix multiples -->
+function wp_quartiers_dropdown( $args = array() ) {
+
+  $out = array();
+
+  $taxonomie = 'genre';
+  // Les possibles arguments de la fonction sont current et ville
+  $current  = is_array( $args['current'] ) ? $args['current'] : array();
+  if ( isset( $args['genre'] )
+    ) {
+      // on récupère les quartiers de la ville demandée
+    $quartiers = get_terms( $taxonomie, array(
+        'child_of' => $ville['term_taxonomy_id'],
+        ) );
+    // pour chque quartier on fait une checkbox
+    foreach ( $quartiers as $quartier ) {
+      $out[] = '<p>';
+      $out[] = '<input type="checkbox" value="' . esc_attr( $quartier->slug ) 
+        . '" name="genre[]" id="genre[' . $quartier->term_id . ']"' 
+
+        // et on vérifie si ce quartier soit être pré-coché
+        . checked( in_array( $quartier->slug, $current ), true, false ) . '>';
+      $out[] = '<label for="genre[' . $quartier->term_id . ']">' 
+        . esc_html( $quartier->name ) . '</label>';
+      $out[] = '</p>';
+    }
+  }
+
+  return implode ( PHP_EOL, $out );
+}
+//affichage menu choix multiples

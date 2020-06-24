@@ -10,14 +10,17 @@
  *
  */
 
+
+/* affichage des restaurants aléatoirement sur la page d'accueil */
 $frontspots = get_posts( array(
-  'numberposts' => 5,
+  'numberposts' => 3,
   'post_type' => 'restaurant',
   'orderby' => 'rand',
 ));
 
+/* affichage de la page restaurant unique */
 $frontfocus = get_posts( array(
-  'restaurant_per_page' => 1,
+  'restaurant_per_page' => 3,
   'post__in' => get_option( 'sticky_posts' ),
   'ignore_sticky_posts' => 1
 ));
@@ -73,6 +76,7 @@ if ( $frontspots ) {
     ?>
 
   </div><!-- .front-spots_grid -->
+  
 <!-- lien de la page d'acceuil vers la page restaurant pour afficher toute la liste des restaurants -->
   <div class="text-center my-5">
     <a href="<?= get_post_type_archive_link('restaurant'); ?>" class="btn btn-outline-primary"><?php _e('Tous les restaurants', 'startheme'); ?></a>

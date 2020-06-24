@@ -74,6 +74,50 @@ $localisation = get_field_object('localisation');
 
 <div class="spot-acf container">
 
+
+<div>
+
+
+
+				<article>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</header>
+
+					<div class="entry-content">
+						<h2>Address</h2>
+						<p><?php the_field('plats'); ?></p>
+
+						<h2>Doctors that work here</h2>
+						<?php 
+
+						/*
+						*  Query posts for a relationship value.
+						*  This method uses the meta_query LIKE to match the string "123" to the database value a:1:{i:0;s:3:"123";} (serialized array)
+						*/
+
+						$plats = get_posts(array(
+							'post_type' => 'plat',
+							'post_per_page' => 1,
+							'meta_query' => array(
+								array(
+									'key' => 'restaurants', // name of custom field
+									'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+									'compare' => 'LIKE'
+                ),
+							),
+						));
+<pre>
+<?php var_dump($plats);?>
+</pre>
+						?>
+						
+					</div>
+
+				</article>
+
+</div>
+
 <div class="spot-infos my-5">
   <!-- appelle  le type de cuisine du restaurant-->
   <h2><?= $type['label']; ?></h2>
@@ -102,7 +146,6 @@ $localisation = get_field_object('localisation');
     
 
 
-
     <div class="spot-acces my-5">
 
       <h2><?= $acces['label'] ?></h2>
@@ -123,6 +166,10 @@ $localisation = get_field_object('localisation');
   <!-- appelle la localisation du restaurant-->
   <h2><?= $adresse['label']; ?></h2>
       <?= $adresse['value']; ?>
+
+
+
+      
     </div>
     <div class="spot-infos my-5">
   <!-- appelle le quartier du restaurant-->

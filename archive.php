@@ -14,7 +14,17 @@ get_header();
 
 <main>
 
-
+<!-- affichage menu choix multiples -->
+<div id="quartier-wrapper"> 
+<?php
+if ( get_query_var('genre') ) {
+  $args = array( 'genre' => get_query_var( 'genre' ) );
+  echo wp_quartiers_dropdown( $args );
+} ?>
+</div>
+  <button type="submit">Rechercher</button>
+</form>
+<!-- affichage menu choix multiples -->
 
   <?php if (have_posts()) : ?>
 

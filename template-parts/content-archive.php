@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part pour afficher les messages
  *
  *
  * @package WordPress

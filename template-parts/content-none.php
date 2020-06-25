@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part la page d'erreur 404
  *
  *
  * @package WordPress
@@ -14,7 +14,7 @@
 
   <div class="container py-5">
 
-    <h1 class="page-title entry-title"><?php _e('Aucun résultat trouvé.', 'startheme') ?></h1>
+    <h1 class="page-title entry-title"><?php _e('Oups! Aucun résultat trouvé!', 'startheme') ?></h1>
 
     <div class="entry-content">  
       <p><?php _e( 'Il semble que nous ne trouvions pas ce que vous recherchez. Aidez vous de la barre de recherche.', 'startheme' ); ?></p>

@@ -47,8 +47,8 @@ if ( $frontspots ) {
 </div>
   <button type="submit"class="btn btn-outline-primary">Voir la Sélection</button>
 </form>
-<!-- affichage menu choix multiples -->
 
+<!-- affichage menu choix multiples -->
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
@@ -77,7 +77,7 @@ if ( $frontspots ) {
 
   </div><!-- .front-spots_grid -->
   
-<!-- lien de la page d'acceuil vers la page restaurant pour afficher toute la liste des restaurants -->
+<!-- lien de la page d'accueil vers la page restaurant pour afficher toute la liste des restaurants -->
   <div class="text-center my-5">
     <a href="<?= get_post_type_archive_link('restaurant'); ?>" class="btn btn-outline-primary"><?php _e('Tous les restaurants', 'startheme'); ?></a>
   </div>

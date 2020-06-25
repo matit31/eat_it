@@ -16,6 +16,7 @@
 	<?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
 
   <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top main-navbar">
@@ -23,9 +24,12 @@
     <div class="container">
 
       <div class="navbar-brand">
+
+<!-- Affichage du logo et back to home en cliquant sur le logo -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?= esc_attr__('Back to home page', 'startheme') ?>" class="logo-link"><img src="<?= get_template_directory_uri() . '/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo"></a>
       </div><!-- .navbar-brand -->
-
+      
+<!-- Bouton toogle pour le responsive -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only"><?php _e('Menu', 'startheme') ?></span>
         <span class="navbar-toggler-icon"></span>

@@ -15,6 +15,7 @@
 
     <div class="row">
 
+<!-- 3 colonnes dans le footer appelées depuis wordpress -->
       <div class="footer-col col-sm-12 col-lg-4 pb-3 pb-lg-0">
         <?php dynamic_sidebar('footer-sidebar-1') ?>
       </div>
@@ -29,6 +30,8 @@
 
     </div><!-- .row -->
 
+    
+<!-- appel de la navbar référencée dans wordpress sour le nom de footer_navigation avec le copyright et la date sous forme d'année -->
     <nav class="nav-footer d-flex flex-wrap mt-3">
       <p class="copyright mr-3">&copy; <a href="<?= home_url('/') ?>"><?php bloginfo('name') ?> <?= date('Y') ?></a></p>
       <?php if (has_nav_menu('footer_navigation'))

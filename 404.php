@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template pour l'affichage de la page d'erreur 404
  *
  * ...
  *
@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <main>
-
+<!-- affiche le contenu de la page content -->
   <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 </main>

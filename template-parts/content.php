@@ -10,7 +10,7 @@
  */
 
 ?>
-
+<!-- template commune à toutes les pages affichants des contenus à savoir un header avec un image de fond le titre de la section par dessus et un container -->
 <article <?php post_class(); ?>>
 
   <header class="entry-header main-header py-5">
